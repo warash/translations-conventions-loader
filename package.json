@@ -1,13 +1,13 @@
 {
-  "name": "@angularclass/conventions-loader",
-  "version": "1.0.13",
-  "description": "Allow default for @Component metadata for Angular 2",
+  "name": "translations-conventions-loader",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angularclass/angular2-conventions-loader.git"
+    "url": "https://github.com/warash/translations-conventions-loader.git"
   },
   "keywords": [
     "angular2",
@@ -19,12 +19,8 @@
     "AngularClass",
     "AngularClassModules"
   ],
-  "author": "PatrickJS <patrick@angularclass.com>",
+  "author": "",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/angularclass/angular2-conventions-loader/issues"
-  },
-  "homepage": "https://github.com/angularclass/angular2-conventions-loader#readme",
   "devDependencies": {
   },
   "dependencies": {
