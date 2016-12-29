@@ -30,7 +30,7 @@ function TranslationsConventionsLoader(source, sourcemap) {
         // }
 
         var metadata;
-        if (query.prod){
+        if (query.remote){
             metadata = "{ remote: './" + lastFileName + ".i18n.json' }";
         }else{
             metadata = "{ remote: './" + lastFileName + ".i18n.json', static: { 'en': require('./" + lastFileName + ".i18n.json') } }";
