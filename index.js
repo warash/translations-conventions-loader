@@ -17,6 +17,8 @@ function TranslationsConventionsLoader(source, sourcemap) {
     self.cacheable && self.cacheable();
 
 
+    var query = loaderUtils.parseQuery(this.query);
+
 
     source = source.replace(translationRegex, function (match, offset, src) {
 
@@ -26,7 +28,14 @@ function TranslationsConventionsLoader(source, sourcemap) {
         // if (lastFileName.indexOf(relativePathStart) === 0) {
         //     lastFileName = lastFileName.substr(relativePathStart.length);
         // }
-        var metadata = "{ remote: './" + lastFileName + ".i18n.json', static: { 'en': require('./" + lastFileName + ".i18n.json') } }";
+
+        var metadata;
+        if (query.prod){
+            metadata = "{ remote: './" + lastFileName + ".i18n.json' }";
+        }else{
+            metadata = "{ remote: './" + lastFileName + ".i18n.json', static: { 'en': require('./" + lastFileName + ".i18n.json') } }";
+        }
+
 
         return '@Translations' + '(' + metadata + ')';
     });
